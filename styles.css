@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+	--side-color: black;
+	--main-black-color: #181818;
+	--text-default-color: white;
+	--cyan: rgb(0, 255, 255);
+	--text-black-color: #979daa;
+	--light-grey: #404040;
+	--container-hover: #4c4e55;
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	color: var(--text-default-color);
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+/* *** This makes the side scroll bar slimmer and of cyan colour *** */
+
+body::-webkit-scrollbar {
+	width: 0.25rem;
+	height: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: var(--main-black-color);
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--cyan);
+}
+
+/* *** End *** */
+
+a {
+	display: block;
+	max-width: 180px;
+}
+
+h2 {
+	font-size: 1rem;
+	padding: 8px 0px 2px 13px;
+}
+
+main {
+	background-color: var(--main-black-color);
+	height: 268vh;
+}
+
+/* *** These are the small classes used all over the HTML that performs some specific functions *** */
+
+.align-center {
+	align-items: center;
+	text-align: center;
+}
+
+.absolute-position {
+	position: absolute;
+}
+
+.block {
+	display: block;
+}
+
+.cyan {
+	color: var(--cyan);
+}
+
+.fixed-position {
+	position: fixed;
+}
+
+.font-400 {
+	font-weight: 400;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.grid {
+	display: grid;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.inline {
+	display: inline;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-evenly {
+	justify-content: space-evenly;
+}
+
+.relative-position {
+	position: relative;
+}
+
+/* *** End *** */
+
+
+/* *** Side Navigation  ( Left Side ) *** */
+
+#side-navigation {
+	background-color: var(--side-color);
+	height: 100vh;
+	width: 15vw;
+}
+
+.container {
+	height: 6vh;
+	width: 13.5vw;
+	margin: 2vh 1vw 1vh 1vw;
+	border-radius: 10px;
+	text-align: left;
+	font-size: 1rem;
+}
+
+.container h5 {
+	bottom: 10px;
+}
+
+/* Profile Image */
+.profile-image {
+	width: 35px;
+	border-radius: 70%;
+	padding: 4px 0px 0px 7px;
+}
+
+.sub-title {
+	padding: 3% 0% 3% 10%;
+	color: var(--text-black-color);
+	font-size: .9rem;
+}
+
+/* *** End *** */
+
+
+/* *** Top Navigation (Search bar and top part) *** */
+
+nav {
+	background-color: var(--main-black-color);
+	margin-left: 15vw;
+	height: 10.5vh;
+	width: 70%;
+}
+
+/* Search Bar */
+.input {
+	width: 25vw;
+	border: 3px solid var(--main-black-color);
+	margin: 17px 0px 0px 5px;
+	background: var(-text-default-color);
+	padding: 8px 30px;
+	border-radius: 10px;
+	outline: none;
+	font-size: .8rem;
+	color: var(--main-black-color);
+	font-weight: bold;
+	letter-spacing: 1px;
+	min-width: 9rem;
+}
+
+.nav-section-one {
+	flex-grow: 0;
+}
+
+.nav-section-two {
+	flex-grow: 1;
+}
+
+.nav-section-three {
+	min-width: 22vw;
+	flex-grow: 2;
+}
+
+.nav-section-four {
+	flex-grow: 2;
+}
+
+.nav-section-two h2 {
+	margin: 17px 5px 0px 5px;
+}
+
+.page-navigation-arrows {
+	margin: 30px 0px 0px 17px;
+}
+
+.search-icon {
+	top: 28px;
+	left: 15px;
+	color: var(--main-black-color);
+}
+
+/* *** End *** */
+
+
+/* *** Side Navigation / Playlist ( Right Side ) *** */
+
+h3 {
+	font-size: .7rem;
+	padding: 7px 0px 2px 13px;
+	color: var(--cyan);
+}
+
+h4 {
+	font-size: .6rem;
+	padding: 0px 0px 2px 13px;
+}
+
+/* Like or heart button to tell weather you like this song or not  */
+.like {
+	font-size: .9rem;
+	right: 10px;
+	bottom: 15px;
+}
+
+.playlist-list {
+	right: 0px;
+	width: 15vw;
+	height: 100vh;
+	background-color: var(--side-color);
+}
+
+.playlist-list div h1 {
+	margin: 2vh 1vw 4vh 1vw;
+}
+
+.scroll {
+	overflow-x: hidden;
+	height: 77vh;
+}
+
+/* *** End *** */
+
+
+/* *** Music Player  - The bottom player part which remains fixed at the bottom *** */
+
+.albm-img {
+	min-width: 130px;
+}
+
+.albm-img img {
+	width: 5.2rem;
+	min-width: 60px;
+	padding: 2% 0% 0% 2%;
+}
+
+.albm-img div {
+	padding: 15px 0px 20px 8px;
+}
+
+.albm-img div h5 {
+	margin-bottom: 7px;
+}
+
+/* this class is the main div for the music player */
+.player {
+	bottom: 0px;
+	background-color: rgb(40, 40, 40);
+	width: 100%;
+	height: 12vh;
+	grid-template-columns: 1fr 2fr 1fr;
+}
+
+.song-bar {
+	min-width: 170px;
+	font-size: .9rem;
+}
+
+.volume-control {
+	min-width: auto;
+	justify-content: space-around;
+}
+
+/* Player bar */
+
+
+.player-icons {
+	padding-top: 3%;
+	width: 65%;
+}
+
+.player-icons-two {
+	width: 70%;
+}
+
+#slider-background {
+	border: 0.5px solid var(--light-grey);
+	border-radius: 2px;
+	width: 75%;
+	height: 4px;
+	background-color: var(--light-grey);
+}
+
+#slider-front {
+	height: 100%;
+	width: 50%;
+	background-color: var(--text-default-color);
+}
+
+/* Volume bar*/
+
+#small-slider-background {
+	width: 30%;
+	height: 4px;
+	background-color: var(--light-grey);
+	border: 0.5px solid var(--light-grey);
+	border-radius: 2px;
+}
+
+#small-slider-front {
+	background-color: var(--text-default-color);
+	height: 100%;
+	width: 60%;
+}
+
+/* *** End *** */
+
+
+/* *** Main content , This part is the main contentent of the page *** */
+
+.main-content {
+	margin-left: 15vw;
+}
+
+.space {
+	height: 100px;
+}
+
+/* Carousel */
+
+.carousel {
+	width: 82%;
+	height: 37vh;
+}
+
+.carousel-image {
+	width: 34%;
+	transition: width ease-in 200ms;
+}
+
+.carousel-image img {
+	padding-left: 10%;
+	width: 95%;
+}
+
+/* latest songs */
+
+.main-content-containers {
+	margin: 3% 0 0 3%;
+}
+
+.main-content-title {
+	padding: 1% 0 3% 0%;
+	font-size: 1.5rem;
+}
+
+.main-content-containers-list {
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	width: 80%;
+	grid-gap: 1%;
+}
+
+.name {
+	font-size: 1rem;
+}
+
+.sub-name {
+	font-size: .7rem;
+	color: var(--text-black-color);
+}
+
+.latest-release {
+	height: 12vw;
+}
+
+.popular-artist {
+	height: 10vw;
+	border-radius: 50%;
+}
+
+/* *** End *** */
+
+
+/* This is just because a lot of space was left when we move from bigger to a lower sized screen */
+@media(max-width:900px) {
+	main {
+		height: 220vh;
+	}
+}
+
+/* This is for bigger phones and lower */
+@media (max-width: 730px) {
+
+	main {
+		height: 170vh;
+	}
+
+	/* side playlist (right part)*/
+	.playlist-list {
+		display: none;
+	}
+
+	/* Top navigation bar */
+	nav {
+		width: 100%;
+	}
+
+	.nav-section-one {
+		font-size: .7rem;
+	}
+
+	.nav-section-three {
+		display: none;
+	}
+
+	/* Contents are not visible on mobile devices */
+	.big-screen-content {
+		margin-right: 5px;
+		display: none;
+	}
+
+	/* Bottom song player */
+	.song-bar {
+		font-size: .7rem;
+	}
+
+	.player-icons {
+		padding-top: 7%;
+	}
+
+	/* Left Navigation Bar */
+	.sub-title {
+		padding: 0 0 0 5px;
+		text-align: left;
+		font-size: .6rem;
+	}
+
+	h2 {
+		padding: 8px 0px 2px 6px;
+		font-size: .7rem;
+		text-align: left;
+	}
+
+	/* Carousel */
+	.carousel {
+		width: 100%;
+		padding-left: 3%;
+		height: 23vh;
+	}
+
+	.carousel-image {
+		margin-right: 7%;
+		transition: none;
+	}
+
+	.carousel-image img {
+		padding-left: 0%;
+	}
+
+	/* The main Content of the page  */
+	.main-content-containers-list {
+		width: 100%;
+	}
+
+	/* song name */
+	.name {
+		font-size: .6rem;
+	}
+
+	/* artist name */
+	.sub-name {
+		font-size: .5rem;
+	}
+}
+
+/* These are the hover effects , they do not work on devices with a screen 730px lower size */
+@media (min-width: 730px) {
+	a:hover {
+		color: var(--cyan);
+	}
+
+	.container:hover {
+		background-color: var(--container-hover);
+		cursor: pointer;
+	}
+
+	.carousel-image:hover {
+		width: 32%;
+	}
+
+	.carousel-image img:hover {
+		padding-left: 0px;
+	}
+}
+
+/* Same reason as before , but this time for mobile devices there is some emply space left at the bottom */
+@media(max-width:450px) {
+	main {
+		height: 150vh;
+	}
+}
